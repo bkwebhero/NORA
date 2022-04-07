@@ -9,6 +9,8 @@ import Foundation
 import Combine
 
 class BellyViewModel: ObservableObject {
-    var cancellable: AnyCancellable?
-    @Published var isVisible: Bool = false
+    var isBigCancellable: AnyCancellable?
+    @Published var isBig: Bool = false
+    var kickCancellable: AnyCancellable?
+    @Published var kick: Bool = false
 }

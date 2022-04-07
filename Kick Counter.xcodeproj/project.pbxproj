@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C167E4527FE3CCD00FD6D33 /* Kick_CounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C167E4427FE3CCD00FD6D33 /* Kick_CounterApp.swift */; };
-		9C167E4727FE3CCD00FD6D33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C167E4627FE3CCD00FD6D33 /* ContentView.swift */; };
+		9C167E4727FE3CCD00FD6D33 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C167E4627FE3CCD00FD6D33 /* MenuView.swift */; };
 		9C167E4927FE3CCE00FD6D33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C167E4827FE3CCE00FD6D33 /* Assets.xcassets */; };
 		9C167E4C27FE3CCE00FD6D33 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C167E4B27FE3CCE00FD6D33 /* Preview Assets.xcassets */; };
 		9C167E4E27FE3CCE00FD6D33 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C167E4D27FE3CCE00FD6D33 /* Persistence.swift */; };
@@ -29,7 +29,9 @@
 		9C8E0BAB27FF186300763C62 /* HistoryRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BAA27FF186300763C62 /* HistoryRowViewModel.swift */; };
 		9C8E0BAD27FF3BA800763C62 /* ReversingScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BAC27FF3BA800763C62 /* ReversingScale.swift */; };
 		9C8E0BAF27FF425600763C62 /* BellyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BAE27FF425600763C62 /* BellyViewModel.swift */; };
-		9C8E0BB127FF479300763C62 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BB027FF479300763C62 /* NavigationButton.swift */; };
+		9C8E0BB427FF833C00763C62 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BB327FF833C00763C62 /* UIColor+Extensions.swift */; };
+		9C8E0BB827FF850800763C62 /* StaticButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BB727FF850800763C62 /* StaticButtonStyle.swift */; };
+		9C8E0BBA27FF88E600763C62 /* BellyMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BB927FF88E600763C62 /* BellyMask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,7 @@
 /* Begin PBXFileReference section */
 		9C167E4127FE3CCD00FD6D33 /* NORA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NORA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C167E4427FE3CCD00FD6D33 /* Kick_CounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kick_CounterApp.swift; sourceTree = "<group>"; };
-		9C167E4627FE3CCD00FD6D33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9C167E4627FE3CCD00FD6D33 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		9C167E4827FE3CCE00FD6D33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C167E4B27FE3CCE00FD6D33 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9C167E4D27FE3CCE00FD6D33 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -75,7 +77,9 @@
 		9C8E0BAA27FF186300763C62 /* HistoryRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRowViewModel.swift; sourceTree = "<group>"; };
 		9C8E0BAC27FF3BA800763C62 /* ReversingScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversingScale.swift; sourceTree = "<group>"; };
 		9C8E0BAE27FF425600763C62 /* BellyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BellyViewModel.swift; sourceTree = "<group>"; };
-		9C8E0BB027FF479300763C62 /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+		9C8E0BB327FF833C00763C62 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		9C8E0BB727FF850800763C62 /* StaticButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticButtonStyle.swift; sourceTree = "<group>"; };
+		9C8E0BB927FF88E600763C62 /* BellyMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BellyMask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,15 +131,16 @@
 		9C167E4327FE3CCD00FD6D33 /* Kick Counter */ = {
 			isa = PBXGroup;
 			children = (
-				9C8E0BA227FE7BF000763C62 /* SwiftUIHelpers */,
-				9C167E4627FE3CCD00FD6D33 /* ContentView.swift */,
 				9C167E4427FE3CCD00FD6D33 /* Kick_CounterApp.swift */,
 				9C167E4D27FE3CCE00FD6D33 /* Persistence.swift */,
 				9C167E4827FE3CCE00FD6D33 /* Assets.xcassets */,
 				9C167E8427FE73C000FD6D33 /* Counter */,
+				9C8E0BB227FF832D00763C62 /* Extensions */,
 				9C167E8827FE740A00FD6D33 /* History */,
 				9C167E4F27FE3CCE00FD6D33 /* Kick_Counter.xcdatamodeld */,
+				9C8E0BB527FF835F00763C62 /* Menu */,
 				9C167E4A27FE3CCE00FD6D33 /* Preview Content */,
+				9C8E0BA227FE7BF000763C62 /* SwiftUIHelpers */,
 				9C167E8627FE73D700FD6D33 /* ViewComponents */,
 			);
 			path = "Kick Counter";
@@ -194,8 +199,7 @@
 		9C167E8627FE73D700FD6D33 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
-				9C167E7327FE3D4C00FD6D33 /* BellyView.swift */,
-				9C8E0BAE27FF425600763C62 /* BellyViewModel.swift */,
+				9C8E0BBB27FF89A700763C62 /* Belly */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -233,7 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				9C8E0BAC27FF3BA800763C62 /* ReversingScale.swift */,
-				9C8E0BB027FF479300763C62 /* NavigationButton.swift */,
+				9C8E0BB727FF850800763C62 /* StaticButtonStyle.swift */,
 			);
 			path = SwiftUIHelpers;
 			sourceTree = "<group>";
@@ -245,6 +249,40 @@
 				9C8E0BAA27FF186300763C62 /* HistoryRowViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9C8E0BB227FF832D00763C62 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9C8E0BB327FF833C00763C62 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9C8E0BB527FF835F00763C62 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				9C8E0BB627FF838100763C62 /* View */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		9C8E0BB627FF838100763C62 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C167E4627FE3CCD00FD6D33 /* MenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C8E0BBB27FF89A700763C62 /* Belly */ = {
+			isa = PBXGroup;
+			children = (
+				9C167E7327FE3D4C00FD6D33 /* BellyView.swift */,
+				9C8E0BAE27FF425600763C62 /* BellyViewModel.swift */,
+				9C8E0BB927FF88E600763C62 /* BellyMask.swift */,
+			);
+			path = Belly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,16 +417,18 @@
 			files = (
 				9C167E7827FE486C00FD6D33 /* HistoryView.swift in Sources */,
 				9C167E8127FE589E00FD6D33 /* Kick+CoreDataClass.swift in Sources */,
+				9C8E0BBA27FF88E600763C62 /* BellyMask.swift in Sources */,
 				9C167E7A27FE49FB00FD6D33 /* CounterViewModel.swift in Sources */,
 				9C167E7F27FE589E00FD6D33 /* Session+CoreDataClass.swift in Sources */,
 				9C167E4E27FE3CCE00FD6D33 /* Persistence.swift in Sources */,
-				9C167E4727FE3CCD00FD6D33 /* ContentView.swift in Sources */,
+				9C167E4727FE3CCD00FD6D33 /* MenuView.swift in Sources */,
+				9C8E0BB827FF850800763C62 /* StaticButtonStyle.swift in Sources */,
 				9C167E5127FE3CCE00FD6D33 /* Kick_Counter.xcdatamodeld in Sources */,
+				9C8E0BB427FF833C00763C62 /* UIColor+Extensions.swift in Sources */,
 				9C167E4527FE3CCD00FD6D33 /* Kick_CounterApp.swift in Sources */,
 				9C167E7427FE3D4C00FD6D33 /* BellyView.swift in Sources */,
 				9C8E0BAF27FF425600763C62 /* BellyViewModel.swift in Sources */,
 				9C8E0BAB27FF186300763C62 /* HistoryRowViewModel.swift in Sources */,
-				9C8E0BB127FF479300763C62 /* NavigationButton.swift in Sources */,
 				9C167E8227FE589E00FD6D33 /* Kick+CoreDataProperties.swift in Sources */,
 				9C167E8027FE589E00FD6D33 /* Session+CoreDataProperties.swift in Sources */,
 				9C8E0BAD27FF3BA800763C62 /* ReversingScale.swift in Sources */,

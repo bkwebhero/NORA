@@ -9,7 +9,8 @@ import Foundation
 
 class HistoryRowViewModel: ObservableObject {
     
-    var session: Session
+    // MARK: Dependency
+    private var session: Session
     
     init(session: Session) {
         self.session = session
@@ -19,10 +20,12 @@ class HistoryRowViewModel: ObservableObject {
         durationString = getDurationString()
     }
     
+    // MARK: Readables
     @Published var dateString: String = ""
     @Published var timeString: String = ""
     @Published var durationString: String = ""
     
+    // MARK: Private methods
     private func getDateString() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "E, MMM d"

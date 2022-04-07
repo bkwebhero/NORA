@@ -10,23 +10,33 @@ import CoreData
 
 struct CounterView: View {
     
+    // MARK: Environment
+    /// Used to go back when tapping Cancel or reaching goal
     @Environment(\.dismiss) var dismiss
+    
+    // MARK: View models
+    /// Tracks progress
+    /// Stores/updates text
+    /// Saves/deletes data
     @ObservedObject var viewModel: CounterViewModel
+    /// Tells BellyView when and how to animate
+    @ObservedObject var bellyViewModel: BellyViewModel
+    
+    // MARK: State
+    /// Used for kick animation
     @State private var scalingFactor: CGFloat = 1
-    private let animationDuration: Double = 0.5
-    @State var bellyViewModel: BellyViewModel
     
     var body: some View {
         VStack(spacing: 8) {
             
-            // Cancel button
+            // MARK: Cancel button
             // Ideally this would be in navigation bar but SwiftUI does not yet offer enough control over animations
             // I want the belly to expand and hide the cancel button
             // Not an option with navigation bar at the moment
             HStack {
                 Button(action: {
-                    bellyViewModel.isVisible = false
-                    DispatchQueue.main.asyncAfter(deadline: .now() + animationDuration) {
+                    bellyViewModel.isBig = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + BellyView.animationDuration) {
                         viewModel.cancel()
                     }
                 }){
@@ -38,42 +48,32 @@ struct CounterView: View {
                 Spacer()
             }
             
-            // Timer text
+            // MARK: Timer text
             Text(viewModel.timeStarted, style: .relative)
                 .font(Font.system(size: 20, weight: .medium))
                 .padding(.top, 32)
             Spacer()
             
-            // Belly view
+            // MARK: Belly view
             Button {
                 // Increment progress towards goal of 10 kicks
                 viewModel.kick()
-                // Make belly view expand and shrink back down
-                withAnimation(.linear(duration: 0.1)) {
-                    scalingFactor = 1.5
-                }
+                bellyViewModel.kick = true
                 // Haptic feedback
                 let generator = UIImpactFeedbackGenerator(style: .heavy)
                 generator.impactOccurred()
             } label: {
                 BellyView(viewModel: bellyViewModel)
                     .padding()
-                    // Custom modifier to reverse the kick animation once it is at full size
-                    .modifier(ReversingScale(to: scalingFactor, onEnded: {
-                        DispatchQueue.main.async {
-                            withAnimation(.easeOut(duration: 0.25)) {
-                                scalingFactor = 1.0
-                            }
-                        }
-                    }))
             }
             // Make sure belly hides all text when fully expanded for animation
             .zIndex(5)
+            // Don't show button highlighting
             .buttonStyle(StaticButtonStyle())
-            
+
             Spacer()
             
-            // Progress text
+            // MARK: Progress text
             Text(viewModel.progressText)
                 .font(Font.system(size: 20, weight: .medium))
                 .zIndex(1)
@@ -83,19 +83,14 @@ struct CounterView: View {
         }
         .navigationBarHidden(true)
         .onAppear {
-            bellyViewModel.isVisible = true
+            bellyViewModel.isBig = true
+            // Listen for goal met event
             viewModel.cancellable = viewModel.$goalMet.sink { goalMet in
                 if goalMet {
                     dismiss()
                 }
             }
         }
-    }
-}
-
-struct StaticButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
     }
 }
 

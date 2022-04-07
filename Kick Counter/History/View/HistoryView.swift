@@ -15,7 +15,7 @@ struct HistoryView: View {
         VStack {
             List {
                 ForEach(viewModel.sessions, id: \.self) { session in
-                    HistoryRowView(viewModel: HistoryRowViewModel(session: session))
+                    HistoryRowView(viewModel: createHistoryRowViewModel(for: session))
                         .padding([.top, .bottom])
                 }
                 .onDelete { indices in
@@ -23,6 +23,10 @@ struct HistoryView: View {
                 }
             }
         }
+    }
+    
+    private func createHistoryRowViewModel(for session: Session) -> HistoryRowViewModel {
+        return HistoryRowViewModel(session: session)
     }
 }
 

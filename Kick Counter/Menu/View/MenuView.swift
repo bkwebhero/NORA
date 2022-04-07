@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MenuView.swift
 //  Kick Counter
 //
 //  Created by Benjamin Kelsey on 4/6/22.
@@ -14,7 +14,8 @@ enum MenuSelection: String {
     case history
 }
 
-struct ContentView: View {
+// TO-DO: Make a view model?
+struct MenuView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State var bellyViewModel = BellyViewModel()
     @State var selection: MenuSelection? = nil
@@ -22,20 +23,21 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
+                
+                // MARK: Title
                 Text("Kick Counter")
                     .font(.system(size: 32, weight: .bold))
                     .foregroundColor(.primary)
                     .padding()
-                
                 Spacer()
                 
-                // Belly
+                // MARK: Belly
                 BellyView(viewModel: bellyViewModel)
                     .padding()
                     .zIndex(5)
                 Spacer()
                 
-                // Counter button
+                // MARK: Counter button
                 NavigationLink(tag: MenuSelection.counter, selection: $selection) {
                     CounterView(viewModel: createCounterViewModel(),
                                 bellyViewModel: createBellyViewModel())
@@ -43,8 +45,7 @@ struct ContentView: View {
                     EmptyView()
                 }
                 Button {
-                    UINavigationBar.setAnimationsEnabled(false)
-                    bellyViewModel.isVisible = false
+                    bellyViewModel.isBig = false
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                         selection = .counter
                     }
@@ -55,16 +56,15 @@ struct ContentView: View {
                         .padding()
                 }
                 
-                // History button
+                // MARK: History button
                 NavigationLink(tag: MenuSelection.history, selection: $selection) {
                     HistoryView(viewModel: createHistoryViewModel())
                 } label: {
                     EmptyView()
                 }
                 Button {
-                    UINavigationBar.setAnimationsEnabled(true)
-                    bellyViewModel.isVisible = false
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    bellyViewModel.isBig = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + BellyView.animationDuration - 0.2) {
                         selection = .history
                     }
                 } label: {
@@ -76,7 +76,7 @@ struct ContentView: View {
             }
             .zIndex(1)
             .onAppear {
-                bellyViewModel.isVisible = true
+                bellyViewModel.isBig = true
             }
             .navigationBarHidden(true)
         }
@@ -96,19 +96,8 @@ struct ContentView: View {
     
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().previewDevice("iPhone 11").environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}
-
-
-extension UIColor {
-    var isDarkColor: Bool {
-        var r, g, b, a: CGFloat
-        (r, g, b, a) = (0, 0, 0, 0)
-        self.getRed(&r, green: &g, blue: &b, alpha: &a)
-        let lum = 0.2126 * r + 0.7152 * g + 0.0722 * b
-        return  lum < 0.50
+        MenuView().previewDevice("iPhone 11").environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

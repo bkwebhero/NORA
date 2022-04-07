@@ -13,12 +13,13 @@ struct Kick_CounterApp: App {
 
     init() {
         UINavigationBar.appearance().tintColor = UIColor(.primary)
-//        UINavigationBar.setAnimationsEnabled(false)
+        UINavigationBar.setAnimationsEnabled(false)
+        UITableView.appearance().backgroundColor = UIColor(.shirt)
     }
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MenuView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
