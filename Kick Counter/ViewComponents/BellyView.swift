@@ -7,11 +7,14 @@
 
 import SwiftUI
 
-var skin: Color = Color(red: 198/255, green: 134/255, blue: 66/255)
-var shirt: Color = Color(red: 219/255, green: 83/255, blue: 117/255)
+extension Color {
+    static var skin = Color(red: 198/255, green: 134/255, blue: 66/255)
+    static var shirt = Color(red: 219/255, green: 83/255, blue: 117/255)
+}
 
 struct BellyView: View {
     
+    @ObservedObject var viewModel: BellyViewModel
     @State private var scalingFactor: CGFloat = 1
     private let animationDuration: Double = 0.5
     
@@ -19,12 +22,12 @@ struct BellyView: View {
         ZStack(alignment: .bottom) {
             // Shirt
             Circle()
-                .foregroundColor(shirt)
+                .foregroundColor(.shirt)
             
             // Skin
             Circle()
                 .mask(BellyMask().fill(style: FillStyle(eoFill: true)))
-                .foregroundColor(skin)
+                .foregroundColor(.skin)
             
             // Belly button
             Circle()
@@ -32,25 +35,29 @@ struct BellyView: View {
                 .frame(width: 5, height: 5)
                 .padding()
         }
+        .scaleEffect(scalingFactor)
         .aspectRatio(1, contentMode: .fit)
-//        .onAppear {
-//            appear()
-//        }
+        .onAppear {
+            viewModel.cancellable = viewModel.$isVisible.sink { isVisible in
+                isVisible ? appear() : disappear()
+            }
+        }
     }
     
-//    func disappear() {
-//        withAnimation(.easeOut(duration: animationDuration)) {
-//            scalingFactor = 20
-//        }
-//    }
-//
-//    func appear() {
-//        // Animation big belly to small belly
-//        scalingFactor = 20
-//        withAnimation(.easeOut(duration: animationDuration)) {
-//            scalingFactor = 1
-//        }
-//    }
+    private func disappear() {
+        // Animation small belly to big belly
+        withAnimation(.easeIn(duration: animationDuration)) {
+            scalingFactor = 20
+        }
+    }
+
+    private func appear() {
+        // Animation big belly to small belly
+        scalingFactor = 20
+        withAnimation(.easeOut(duration: animationDuration)) {
+            scalingFactor = 1
+        }
+    }
 }
 
 // Animate the edge insets to give illusion of movement
@@ -71,7 +78,7 @@ struct BellyMask: Shape {
 
 struct BellyView_Previews: PreviewProvider {
     static var previews: some View {
-        BellyView()
+        BellyView(viewModel: BellyViewModel())
             .previewLayout(.sizeThatFits)
     }
 }

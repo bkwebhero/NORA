@@ -13,6 +13,7 @@ struct Kick_CounterApp: App {
 
     init() {
         UINavigationBar.appearance().tintColor = UIColor(.primary)
+//        UINavigationBar.setAnimationsEnabled(false)
     }
     
     var body: some Scene {

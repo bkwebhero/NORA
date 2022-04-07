@@ -28,6 +28,8 @@
 		9C8E0BA927FF158E00763C62 /* HistoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BA827FF158E00763C62 /* HistoryRowView.swift */; };
 		9C8E0BAB27FF186300763C62 /* HistoryRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BAA27FF186300763C62 /* HistoryRowViewModel.swift */; };
 		9C8E0BAD27FF3BA800763C62 /* ReversingScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BAC27FF3BA800763C62 /* ReversingScale.swift */; };
+		9C8E0BAF27FF425600763C62 /* BellyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BAE27FF425600763C62 /* BellyViewModel.swift */; };
+		9C8E0BB127FF479300763C62 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BB027FF479300763C62 /* NavigationButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		9C8E0BA827FF158E00763C62 /* HistoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRowView.swift; sourceTree = "<group>"; };
 		9C8E0BAA27FF186300763C62 /* HistoryRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRowViewModel.swift; sourceTree = "<group>"; };
 		9C8E0BAC27FF3BA800763C62 /* ReversingScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversingScale.swift; sourceTree = "<group>"; };
+		9C8E0BAE27FF425600763C62 /* BellyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BellyViewModel.swift; sourceTree = "<group>"; };
+		9C8E0BB027FF479300763C62 /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				9C167E7327FE3D4C00FD6D33 /* BellyView.swift */,
+				9C8E0BAE27FF425600763C62 /* BellyViewModel.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				9C8E0BAC27FF3BA800763C62 /* ReversingScale.swift */,
+				9C8E0BB027FF479300763C62 /* NavigationButton.swift */,
 			);
 			path = SwiftUIHelpers;
 			sourceTree = "<group>";
@@ -380,7 +386,9 @@
 				9C167E5127FE3CCE00FD6D33 /* Kick_Counter.xcdatamodeld in Sources */,
 				9C167E4527FE3CCD00FD6D33 /* Kick_CounterApp.swift in Sources */,
 				9C167E7427FE3D4C00FD6D33 /* BellyView.swift in Sources */,
+				9C8E0BAF27FF425600763C62 /* BellyViewModel.swift in Sources */,
 				9C8E0BAB27FF186300763C62 /* HistoryRowViewModel.swift in Sources */,
+				9C8E0BB127FF479300763C62 /* NavigationButton.swift in Sources */,
 				9C167E8227FE589E00FD6D33 /* Kick+CoreDataProperties.swift in Sources */,
 				9C167E8027FE589E00FD6D33 /* Session+CoreDataProperties.swift in Sources */,
 				9C8E0BAD27FF3BA800763C62 /* ReversingScale.swift in Sources */,
