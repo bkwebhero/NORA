@@ -16,6 +16,18 @@
 		9C167E5B27FE3CCE00FD6D33 /* Kick_CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C167E5A27FE3CCE00FD6D33 /* Kick_CounterTests.swift */; };
 		9C167E6527FE3CCE00FD6D33 /* Kick_CounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C167E6427FE3CCE00FD6D33 /* Kick_CounterUITests.swift */; };
 		9C167E6727FE3CCE00FD6D33 /* Kick_CounterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C167E6627FE3CCE00FD6D33 /* Kick_CounterUITestsLaunchTests.swift */; };
+		9C167E7427FE3D4C00FD6D33 /* BellyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C167E7327FE3D4C00FD6D33 /* BellyView.swift */; };
+		9C167E7627FE486100FD6D33 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C167E7527FE486100FD6D33 /* CounterView.swift */; };
+		9C167E7827FE486C00FD6D33 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C167E7727FE486C00FD6D33 /* HistoryView.swift */; };
+		9C167E7A27FE49FB00FD6D33 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C167E7927FE49FB00FD6D33 /* CounterViewModel.swift */; };
+		9C167E7F27FE589E00FD6D33 /* Session+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C167E7B27FE589E00FD6D33 /* Session+CoreDataClass.swift */; };
+		9C167E8027FE589E00FD6D33 /* Session+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C167E7C27FE589E00FD6D33 /* Session+CoreDataProperties.swift */; };
+		9C167E8127FE589E00FD6D33 /* Kick+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C167E7D27FE589E00FD6D33 /* Kick+CoreDataClass.swift */; };
+		9C167E8227FE589E00FD6D33 /* Kick+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C167E7E27FE589E00FD6D33 /* Kick+CoreDataProperties.swift */; };
+		9C8E0BA727FF119B00763C62 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BA627FF119B00763C62 /* HistoryViewModel.swift */; };
+		9C8E0BA927FF158E00763C62 /* HistoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BA827FF158E00763C62 /* HistoryRowView.swift */; };
+		9C8E0BAB27FF186300763C62 /* HistoryRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BAA27FF186300763C62 /* HistoryRowViewModel.swift */; };
+		9C8E0BAD27FF3BA800763C62 /* ReversingScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BAC27FF3BA800763C62 /* ReversingScale.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9C167E4127FE3CCD00FD6D33 /* Kick Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kick Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C167E4127FE3CCD00FD6D33 /* NORA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NORA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C167E4427FE3CCD00FD6D33 /* Kick_CounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kick_CounterApp.swift; sourceTree = "<group>"; };
 		9C167E4627FE3CCD00FD6D33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9C167E4827FE3CCE00FD6D33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +60,18 @@
 		9C167E6027FE3CCE00FD6D33 /* Kick CounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kick CounterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C167E6427FE3CCE00FD6D33 /* Kick_CounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kick_CounterUITests.swift; sourceTree = "<group>"; };
 		9C167E6627FE3CCE00FD6D33 /* Kick_CounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kick_CounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9C167E7327FE3D4C00FD6D33 /* BellyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BellyView.swift; sourceTree = "<group>"; };
+		9C167E7527FE486100FD6D33 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		9C167E7727FE486C00FD6D33 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		9C167E7927FE49FB00FD6D33 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
+		9C167E7B27FE589E00FD6D33 /* Session+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9C167E7C27FE589E00FD6D33 /* Session+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9C167E7D27FE589E00FD6D33 /* Kick+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kick+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9C167E7E27FE589E00FD6D33 /* Kick+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kick+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9C8E0BA627FF119B00763C62 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		9C8E0BA827FF158E00763C62 /* HistoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRowView.swift; sourceTree = "<group>"; };
+		9C8E0BAA27FF186300763C62 /* HistoryRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRowViewModel.swift; sourceTree = "<group>"; };
+		9C8E0BAC27FF3BA800763C62 /* ReversingScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversingScale.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +102,7 @@
 		9C167E3827FE3CCD00FD6D33 = {
 			isa = PBXGroup;
 			children = (
+				9C167E8727FE73ED00FD6D33 /* CoreData Models */,
 				9C167E4327FE3CCD00FD6D33 /* Kick Counter */,
 				9C167E5927FE3CCE00FD6D33 /* Kick CounterTests */,
 				9C167E6327FE3CCE00FD6D33 /* Kick CounterUITests */,
@@ -88,7 +113,7 @@
 		9C167E4227FE3CCD00FD6D33 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C167E4127FE3CCD00FD6D33 /* Kick Counter.app */,
+				9C167E4127FE3CCD00FD6D33 /* NORA.app */,
 				9C167E5627FE3CCE00FD6D33 /* Kick CounterTests.xctest */,
 				9C167E6027FE3CCE00FD6D33 /* Kick CounterUITests.xctest */,
 			);
@@ -98,12 +123,16 @@
 		9C167E4327FE3CCD00FD6D33 /* Kick Counter */ = {
 			isa = PBXGroup;
 			children = (
-				9C167E4427FE3CCD00FD6D33 /* Kick_CounterApp.swift */,
+				9C8E0BA227FE7BF000763C62 /* SwiftUIHelpers */,
 				9C167E4627FE3CCD00FD6D33 /* ContentView.swift */,
-				9C167E4827FE3CCE00FD6D33 /* Assets.xcassets */,
+				9C167E4427FE3CCD00FD6D33 /* Kick_CounterApp.swift */,
 				9C167E4D27FE3CCE00FD6D33 /* Persistence.swift */,
+				9C167E4827FE3CCE00FD6D33 /* Assets.xcassets */,
+				9C167E8427FE73C000FD6D33 /* Counter */,
+				9C167E8827FE740A00FD6D33 /* History */,
 				9C167E4F27FE3CCE00FD6D33 /* Kick_Counter.xcdatamodeld */,
 				9C167E4A27FE3CCE00FD6D33 /* Preview Content */,
+				9C167E8627FE73D700FD6D33 /* ViewComponents */,
 			);
 			path = "Kick Counter";
 			sourceTree = "<group>";
@@ -133,6 +162,85 @@
 			path = "Kick CounterUITests";
 			sourceTree = "<group>";
 		};
+		9C167E8327FE73B300FD6D33 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C167E7927FE49FB00FD6D33 /* CounterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9C167E8427FE73C000FD6D33 /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				9C167E8527FE73CA00FD6D33 /* View */,
+				9C167E8327FE73B300FD6D33 /* ViewModel */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
+		9C167E8527FE73CA00FD6D33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C167E7527FE486100FD6D33 /* CounterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C167E8627FE73D700FD6D33 /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				9C167E7327FE3D4C00FD6D33 /* BellyView.swift */,
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		9C167E8727FE73ED00FD6D33 /* CoreData Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C167E7B27FE589E00FD6D33 /* Session+CoreDataClass.swift */,
+				9C167E7C27FE589E00FD6D33 /* Session+CoreDataProperties.swift */,
+				9C167E7D27FE589E00FD6D33 /* Kick+CoreDataClass.swift */,
+				9C167E7E27FE589E00FD6D33 /* Kick+CoreDataProperties.swift */,
+			);
+			path = "CoreData Models";
+			sourceTree = "<group>";
+		};
+		9C167E8827FE740A00FD6D33 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				9C8E0BA527FF118000763C62 /* ViewModel */,
+				9C167E8927FE741000FD6D33 /* View */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		9C167E8927FE741000FD6D33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C167E7727FE486C00FD6D33 /* HistoryView.swift */,
+				9C8E0BA827FF158E00763C62 /* HistoryRowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C8E0BA227FE7BF000763C62 /* SwiftUIHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				9C8E0BAC27FF3BA800763C62 /* ReversingScale.swift */,
+			);
+			path = SwiftUIHelpers;
+			sourceTree = "<group>";
+		};
+		9C8E0BA527FF118000763C62 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C8E0BA627FF119B00763C62 /* HistoryViewModel.swift */,
+				9C8E0BAA27FF186300763C62 /* HistoryRowViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,7 +258,7 @@
 			);
 			name = "Kick Counter";
 			productName = "Kick Counter";
-			productReference = 9C167E4127FE3CCD00FD6D33 /* Kick Counter.app */;
+			productReference = 9C167E4127FE3CCD00FD6D33 /* NORA.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9C167E5527FE3CCE00FD6D33 /* Kick CounterTests */ = {
@@ -263,10 +371,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C167E7827FE486C00FD6D33 /* HistoryView.swift in Sources */,
+				9C167E8127FE589E00FD6D33 /* Kick+CoreDataClass.swift in Sources */,
+				9C167E7A27FE49FB00FD6D33 /* CounterViewModel.swift in Sources */,
+				9C167E7F27FE589E00FD6D33 /* Session+CoreDataClass.swift in Sources */,
 				9C167E4E27FE3CCE00FD6D33 /* Persistence.swift in Sources */,
 				9C167E4727FE3CCD00FD6D33 /* ContentView.swift in Sources */,
 				9C167E5127FE3CCE00FD6D33 /* Kick_Counter.xcdatamodeld in Sources */,
 				9C167E4527FE3CCD00FD6D33 /* Kick_CounterApp.swift in Sources */,
+				9C167E7427FE3D4C00FD6D33 /* BellyView.swift in Sources */,
+				9C8E0BAB27FF186300763C62 /* HistoryRowViewModel.swift in Sources */,
+				9C167E8227FE589E00FD6D33 /* Kick+CoreDataProperties.swift in Sources */,
+				9C167E8027FE589E00FD6D33 /* Session+CoreDataProperties.swift in Sources */,
+				9C8E0BAD27FF3BA800763C62 /* ReversingScale.swift in Sources */,
+				9C8E0BA727FF119B00763C62 /* HistoryViewModel.swift in Sources */,
+				9C8E0BA927FF158E00763C62 /* HistoryRowView.swift in Sources */,
+				9C167E7627FE486100FD6D33 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,15 +551,17 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "bk.Kick-Counter";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NORA;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -460,15 +582,17 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "bk.Kick-Counter";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NORA;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

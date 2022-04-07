@@ -11,6 +11,10 @@ import SwiftUI
 struct Kick_CounterApp: App {
     let persistenceController = PersistenceController.shared
 
+    init() {
+        UINavigationBar.appearance().tintColor = UIColor(.primary)
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
