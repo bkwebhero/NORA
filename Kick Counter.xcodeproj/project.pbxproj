@@ -32,6 +32,7 @@
 		9C8E0BB427FF833C00763C62 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BB327FF833C00763C62 /* UIColor+Extensions.swift */; };
 		9C8E0BB827FF850800763C62 /* StaticButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BB727FF850800763C62 /* StaticButtonStyle.swift */; };
 		9C8E0BBA27FF88E600763C62 /* BellyMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E0BB927FF88E600763C62 /* BellyMask.swift */; };
+		9CB5C18827FFC2A30066C895 /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB5C18727FFC2A30066C895 /* NavigationLazyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		9C8E0BB327FF833C00763C62 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		9C8E0BB727FF850800763C62 /* StaticButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticButtonStyle.swift; sourceTree = "<group>"; };
 		9C8E0BB927FF88E600763C62 /* BellyMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BellyMask.swift; sourceTree = "<group>"; };
+		9CB5C18727FFC2A30066C895 /* NavigationLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 			children = (
 				9C8E0BAC27FF3BA800763C62 /* ReversingScale.swift */,
 				9C8E0BB727FF850800763C62 /* StaticButtonStyle.swift */,
+				9CB5C18727FFC2A30066C895 /* NavigationLazyView.swift */,
 			);
 			path = SwiftUIHelpers;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				9C167E8227FE589E00FD6D33 /* Kick+CoreDataProperties.swift in Sources */,
 				9C167E8027FE589E00FD6D33 /* Session+CoreDataProperties.swift in Sources */,
 				9C8E0BAD27FF3BA800763C62 /* ReversingScale.swift in Sources */,
+				9CB5C18827FFC2A30066C895 /* NavigationLazyView.swift in Sources */,
 				9C8E0BA727FF119B00763C62 /* HistoryViewModel.swift in Sources */,
 				9C8E0BA927FF158E00763C62 /* HistoryRowView.swift in Sources */,
 				9C167E7627FE486100FD6D33 /* CounterView.swift in Sources */,

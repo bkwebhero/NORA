@@ -79,7 +79,7 @@ struct BellyView: View {
         }
     }
 
-    private func grow() {
+    private func grow() {           
         scalingFactor = 20
         withAnimation(.easeOut(duration: BellyView.animationDuration)) {
             scalingFactor = 1

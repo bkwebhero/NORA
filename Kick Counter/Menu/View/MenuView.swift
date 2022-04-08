@@ -39,8 +39,8 @@ struct MenuView: View {
                 
                 // MARK: Counter button
                 NavigationLink(tag: MenuSelection.counter, selection: $selection) {
-                    CounterView(viewModel: createCounterViewModel(),
-                                bellyViewModel: createBellyViewModel())
+                    NavigationLazyView(CounterView(viewModel: createCounterViewModel(),
+                                                   bellyViewModel: createBellyViewModel()))
                 } label: {
                     EmptyView()
                 }
@@ -58,7 +58,7 @@ struct MenuView: View {
                 
                 // MARK: History button
                 NavigationLink(tag: MenuSelection.history, selection: $selection) {
-                    HistoryView(viewModel: createHistoryViewModel())
+                    NavigationLazyView(HistoryView(viewModel: createHistoryViewModel()))
                 } label: {
                     EmptyView()
                 }
