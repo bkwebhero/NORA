@@ -14,7 +14,6 @@ struct Kick_CounterApp: App {
     init() {
         UINavigationBar.appearance().tintColor = UIColor(.primary)
         UINavigationBar.setAnimationsEnabled(false)
-        UITableView.appearance().backgroundColor = UIColor(.shirt)
     }
     
     var body: some Scene {

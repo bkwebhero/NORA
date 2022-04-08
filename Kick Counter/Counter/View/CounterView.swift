@@ -21,6 +21,8 @@ struct CounterView: View {
     @ObservedObject var viewModel: CounterViewModel
     /// Tells BellyView when and how to animate
     @ObservedObject var bellyViewModel: BellyViewModel
+    /// Have cancel button slide down on appear
+    @State var cancelButtonOffset: CGFloat = -100
     
     // MARK: State
     /// Used for kick animation
@@ -47,6 +49,7 @@ struct CounterView: View {
                 }
                 Spacer()
             }
+            .offset(x: 0, y: cancelButtonOffset)
             
             // MARK: Timer text
             Text(viewModel.timeStarted, style: .relative)
@@ -83,6 +86,9 @@ struct CounterView: View {
         }
         .navigationBarHidden(true)
         .onAppear {
+            withAnimation(.linear(duration: BellyView.animationDuration)) {
+                cancelButtonOffset = 0
+            }
             bellyViewModel.isBig = true
             // Listen for goal met event
             viewModel.cancellable = viewModel.$goalMet.sink { goalMet in

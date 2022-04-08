@@ -25,7 +25,7 @@ struct MenuView: View {
             VStack(alignment: .leading) {
                 
                 // MARK: Title
-                Text("Kick Counter")
+                Text("NORA")
                     .font(.system(size: 32, weight: .bold))
                     .foregroundColor(.primary)
                     .padding()
