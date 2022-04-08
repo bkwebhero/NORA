@@ -20,7 +20,6 @@ class CounterViewModel: ObservableObject {
     
     // MARK: Private state
     private let goal: Int = 10
-    private var progress: Int = 0
     
     init(viewContext: NSManagedObjectContext) {
         self.viewContext = viewContext
@@ -37,6 +36,9 @@ class CounterViewModel: ObservableObject {
     @Published var progressText: String = "0/10 kicks"
     // Provides timestamp to view so it can show relative text
     var timeStarted = Date()
+    var lastKick: Bool {
+        return session.kicks?.count ?? 0 == goal
+    }
     
     // MARK: Public methods
     /// Create a kick and count it as progress towards goal

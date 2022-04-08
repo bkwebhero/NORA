@@ -20,6 +20,7 @@ struct Kick_CounterApp: App {
         WindowGroup {
             MenuView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .onAppear { UIApplication.shared.isIdleTimerDisabled = true }
         }
     }
 }

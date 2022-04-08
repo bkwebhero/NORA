@@ -60,8 +60,11 @@ struct CounterView: View {
             // MARK: Belly view
             Button {
                 // Increment progress towards goal of 10 kicks
+                
                 viewModel.kick()
-                bellyViewModel.kick = true
+                if !viewModel.lastKick {
+                    bellyViewModel.kick = true
+                }
                 // Haptic feedback
                 let generator = UIImpactFeedbackGenerator(style: .heavy)
                 generator.impactOccurred()
@@ -93,7 +96,10 @@ struct CounterView: View {
             // Listen for goal met event
             viewModel.cancellable = viewModel.$goalMet.sink { goalMet in
                 if goalMet {
-                    dismiss()
+                    bellyViewModel.isBig = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + BellyView.animationDuration) {
+                        dismiss()
+                    }
                 }
             }
         }

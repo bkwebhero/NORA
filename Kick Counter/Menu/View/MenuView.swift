@@ -80,6 +80,7 @@ struct MenuView: View {
             }
             .navigationBarHidden(true)
         }
+        .navigationViewStyle(.stack)
     }
     
     private func createCounterViewModel() -> CounterViewModel {
