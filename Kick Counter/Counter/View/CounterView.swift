@@ -53,7 +53,7 @@ struct CounterView: View {
             
             // MARK: Timer text
             Text(viewModel.timeStarted, style: .relative)
-                .font(Font.system(size: 20, weight: .medium))
+                .font(Font.system(size: 24, weight: .bold))
                 .padding(.top, 32)
             Spacer()
             
@@ -78,7 +78,7 @@ struct CounterView: View {
             
             // MARK: Progress text
             Text(viewModel.progressText)
-                .font(Font.system(size: 20, weight: .medium))
+                .font(Font.system(size: 24, weight: .bold))
                 .zIndex(1)
             
             Spacer()
